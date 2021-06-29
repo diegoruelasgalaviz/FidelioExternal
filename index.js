@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/checkout", async (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
+
   console.log("Request:", req.body);
 
   let error;
