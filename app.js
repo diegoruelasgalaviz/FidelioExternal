@@ -22,8 +22,16 @@ const checkout = require('./server/routes/checkout');
      */
     server.use( '/api/checkout', checkout );
 
-    server.get('*', (req, res) => {
-        return handle(req, res)
+    const router = express.Router();
+
+    router.post('*',  async (req, res) => {
+        await stripe.charges.create({
+            amount: parseFloat(req.body.amount)*100,
+            currency: 'MXN',
+            description: 'Fidelio Shop',
+            source: req.body.token.id
+        });
+        res.send({msg: "success"})
     });
 
     const PORT = process.env.PORT || 3000;
