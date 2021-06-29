@@ -4,5 +4,23 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "stripe": "^8.157.0"
-  }
+  },
+  "name": "fidelio-external",
+  "version": "1.0.0",
+  "description": "fidelios cash server",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegoruelasgalaviz/FidelioExternal.git"
+  },
+  "author": "Diego Ruelas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegoruelasgalaviz/FidelioExternal/issues"
+  },
+  "homepage": "https://github.com/diegoruelasgalaviz/FidelioExternal#readme"
 }
